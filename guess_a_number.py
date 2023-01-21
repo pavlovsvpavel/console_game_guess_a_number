@@ -1,14 +1,29 @@
 import random
-drawing = """
+game_name = """
 ╔═╗┬ ┬┌─┐┌─┐┌─┐  ┌─┐  ┌┐┌┬ ┬┌┬┐┌┐ ┌─┐┬─┐
 ║ ╦│ │├┤ └─┐└─┐  ├─┤  ││││ ││││├┴┐├┤ ├┬┘
 ╚═╝└─┘└─┘└─┘└─┘  ┴ ┴  ┘└┘└─┘┴ ┴└─┘└─┘┴└─
 """
-print("Welcome to the game", end="")
-print(drawing)
+congrats_message = """
+ _____                             _         _       _   _                 _ 
+/  __ \                           | |       | |     | | (_)               | |
+| /  \/ ___  _ __   __ _ _ __ __ _| |_ _   _| | __ _| |_ _  ___  _ __  ___| |
+| |    / _ \| '_ \ / _` | '__/ _` | __| | | | |/ _` | __| |/ _ \| '_ \/ __| |
+| \__/\ (_) | | | | (_| | | | (_| | |_| |_| | | (_| | |_| | (_) | | | \__ \_|
+ \____/\___/|_| |_|\__, |_|  \__,_|\__|\__,_|_|\__,_|\__|_|\___/|_| |_|___(_)
+                    __/ |                                                    
+                   |___/                                                     
+__   __                     _       _                                        
+\ \ / /                    (_)     | |                                       
+ \ V /___  _   _  __      ___ _ __ | |                                       
+  \ // _ \| | | | \ \ /\ / / | '_ \| |                                       
+  | | (_) | |_| |  \ V  V /| | | | |_|                                       
+  \_/\___/ \__,_|   \_/\_/ |_|_| |_(_)                                                                                                                                                                                                                                    
+"""
+print(game_name)
 
 computer_choice = random.randint(1, 100)
-user_input = int(input("Enter a number between 1 and 100: "))
+user_input = int(input("Enter a number between 1 and 100: \n"))
 
 while user_input != computer_choice:
 
@@ -20,7 +35,6 @@ while user_input != computer_choice:
         elif user_input > computer_choice:
             print("Too high.")
 
-    user_input = int(input("Enter new number: "))
+    user_input = int(input("Enter new number: \n"))
 
-print()
-print("Congratulations!\nYou guessed the number!")
+print(congrats_message)
