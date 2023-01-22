@@ -23,12 +23,19 @@ __   __                     _       _
 print(game_name)
 
 computer_choice = random.randint(1, 100)
-user_input = int(input("Enter a number between 1 and 100: \n"))
+user_input = input("Enter a number between 1 and 100: \n")
+
+while not user_input.isdigit():
+    print("Wrong input! Try again.")
+
+    user_input = input("Enter a number between 1 and 100: \n")
+
+user_input = int(user_input)
 
 while user_input != computer_choice:
 
     if user_input > 100 or user_input < 1:
-        print("Wrong input!")
+        print("The number is out of range.")
     else:
         if user_input < computer_choice:
             print("Too low.")
